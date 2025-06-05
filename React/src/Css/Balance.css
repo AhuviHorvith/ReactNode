@@ -1,0 +1,126 @@
+.balance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+.balance-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.balance-amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4caf50;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.balance-sheet{
+    width: 100vw;
+    /* height: 100vh; */
+    /* background-color: rgb(241, 241, 241); */
+    padding-top: 3%;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.balance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.balance-table th, .balance-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.balance-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.balance-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.balance-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.balance-table td {
+    font-size: 1rem;
+}
+
+.balance-table td:nth-child(2) {
+    color: red; /* צבע ברירת מחדל לעמודת חובה */
+}
+
+.balance-table td:nth-child(3) {
+    color: green; /* צבע ברירת מחדל לעמודת זכות */
+}
+#space-beetwin{
+    height: 50px;
+    width: 100%;
+}
+/* עיצוב חדש לבחירת מטבע */
+.currency-select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.currency-select {
+    padding: 10px 28px 10px 16px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #5a189a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(161, 140, 209, 0.15);
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    min-width: 110px;
+    text-align: center;
+}
+
+.currency-select:focus {
+    box-shadow: 0 0 0 3px #e0aaff;
+    background: linear-gradient(90deg, #fbc2eb 0%, #a18cd1 100%);
+}
+
+/* עיצוב כפתור הורדת סיכום */
+.download-summary-section {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+.download-summary-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.download-summary-btn:hover {
+  background: #0ca57a;
+}

@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchCategories = createAsyncThunk(
     'categories/fetchCategories',
     async () => {
-        const response = await axios.get('http://localhost:8080/CollectionCategories/getAllCategories', {
+        const response = await axios.get('https://reactnode-server.onrender.com/CollectionCategories/getAllCategories', {
             headers: {
                 'Content-Type': 'application/json',
             },

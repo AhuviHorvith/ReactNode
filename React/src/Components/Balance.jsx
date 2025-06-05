@@ -67,7 +67,7 @@ const Balance = () => {
         console.log("id", id)
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:8080/Revenue/getAllRevenueById/${id}`, {
+            const response = await axios.get(`https://reactnode-server.onrender.com/Revenue/getAllRevenueById/${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
@@ -83,7 +83,7 @@ const Balance = () => {
     const getAllExpenses = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:8080/Expenses/pullExpenses/${id}`, {
+            const response = await axios.get(`https://reactnode-server.onrender.com/Expenses/pullExpenses/${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,

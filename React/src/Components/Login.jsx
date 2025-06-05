@@ -39,7 +39,7 @@ const Login = ({ onClose }) => {
 
     const connectUser = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/User/IfUserExists', {
+            const response = await axios.post('https://reactnode-server.onrender.com/User/IfUserExists', {
                 password,
                 email,
             }, {
@@ -64,7 +64,7 @@ const Login = ({ onClose }) => {
 
     const saveUser = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/User/addUser', {
+            const response = await axios.post('https://reactnode-server.onrender.com/User/addUser', {
                 password,
                 name,
                 email,
@@ -145,7 +145,7 @@ const Login = ({ onClose }) => {
                 <button
                     className="google-btn"
                     type="button"
-                    onClick={() => window.location.href = 'http://localhost:8080/auth/google'}
+                    onClick={() => window.location.href = 'https://reactnode-server.onrender.com/auth/google'}
                 >
                     <GoogleIcon style={{ color: "#ea4335", fontSize: "1.5rem" }} />
                     התחברות עם Google

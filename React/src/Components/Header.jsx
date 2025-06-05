@@ -163,7 +163,7 @@ const Header = () => {
         if (reportTime) {
             const token = localStorage.getItem('token');
             try {
-                const response = await axios.post(`http://localhost:8080/User/addReportTime/${user._id}`, {
+                const response = await axios.post(`https://reactnode-server.onrender.com/User/addReportTime/${user._id}`, {
                     email: user.email,
                     name: user.name,
                     reportTime: reportTime

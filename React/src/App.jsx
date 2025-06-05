@@ -28,7 +28,7 @@ function App() {
       const getUserByToken = async (token) => {
         try {
 
-          const response = await axios.get('http://localhost:8080/User/getUserByToken', {
+          const response = await axios.get('https://reactnode-server.onrender.com/User/getUserByToken', {
 
             headers: {
               'Authorization': `Bearer ${token}`,

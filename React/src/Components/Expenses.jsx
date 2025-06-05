@@ -93,7 +93,7 @@ const Expenses = () => {
         console.log("id", id)
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:8080/Expenses/pullExpenses/${id}`, {
+            const response = await axios.get(`https://reactnode-server.onrender.com/Expenses/pullExpenses/${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`, // הוספת הטוקן לכותרת Authorization
@@ -236,7 +236,7 @@ const Expenses = () => {
             const name = user.name;
             const email = user.email;
 
-            const response = await axios.post(`http://localhost:8080/Expenses/addExpenses/${userId}`, {
+            const response = await axios.post(`https://reactnode-server.onrender.com/Expenses/addExpenses/${userId}`, {
                 email,
                 name,
                 userId,
@@ -257,7 +257,7 @@ const Expenses = () => {
     const deleteExpense = async (expenseId) => {
         try {
             debugger
-            await axios.delete(`http://localhost:8080/Expenses/deleteExpense/${id}/${expenseId}`, {
+            await axios.delete(`https://reactnode-server.onrender.com/Expenses/deleteExpense/${id}/${expenseId}`, {
                 headers: { 'Content-Type': 'application/json' },
             });
 

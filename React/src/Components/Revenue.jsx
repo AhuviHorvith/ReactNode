@@ -57,7 +57,7 @@ const Revenue = () => {
     const getAllRevenue = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:8080/Revenue/getAllRevenueById/${userId}`, {
+            const response = await axios.get(`https://reactnode-server.onrender.com/Revenue/getAllRevenueById/${userId}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
@@ -76,7 +76,7 @@ const Revenue = () => {
             const token = localStorage.getItem('token');
             const price = parseFloat(newAmounts[item.id]) || 0;
             if (!price) return;
-            await axios.post(`http://localhost:8080/Revenue/addRevenue/${userId}`, {
+            await axios.post(`https://reactnode-server.onrender.com/Revenue/addRevenue/${userId}`, {
                 userId,
                 price,
                 revenueId: item.id,
@@ -99,7 +99,7 @@ const Revenue = () => {
         try {
             debugger
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:8080/Revenue/deleteRevenue/${userId}/${revenueId}`, {
+            await axios.delete(`https://reactnode-server.onrender.com/Revenue/deleteRevenue/${userId}/${revenueId}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,

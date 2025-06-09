@@ -16,7 +16,7 @@ const dotenv = require("dotenv")
 const path = require('path');
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://reactnode-client.onrender.com',
   credentials: true
 }));
 dotenv.config()

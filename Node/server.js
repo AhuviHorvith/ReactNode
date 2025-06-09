@@ -13,6 +13,7 @@ const session = require('express-session');
 const {createToken}=require("./Middleware/auth")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv") 
+const path = require('path');
 
 app.use(cors({
   origin: 'http://localhost:5173',

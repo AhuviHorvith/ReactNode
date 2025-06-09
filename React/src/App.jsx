@@ -7,17 +7,16 @@ import Footer from './Components/Footer';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUser } from './Store/UserSlice';
+
 const HomeLazy = React.lazy(() => import('./Components/Home'));
 const LoginLazy = React.lazy(() => import('./Components/Login'));
-
-import GoogleSuccess from './Components/GoogleSuccess';
-
-
 const ExpensesLazy = React.lazy(() => import('./Components/Expenses'))
 const RevenueLazy = React.lazy(() => import('./Components/Revenue'))
 const BalanceLazy = React.lazy(() => import('./Components/Balance'))
 const OptionLazy = React.lazy(() => import('./Components/Option'));
 const PrivacyPolicy = React.lazy(() => import('./Components/PrivacyPolicy'));
+
+import GoogleSuccess from './Components/GoogleSuccess';
 
 function App() {
   const dispatch = useDispatch();

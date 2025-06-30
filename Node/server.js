@@ -23,10 +23,13 @@ dotenv.config()
 app.use(bodyParser.json())
 
 app.use(session({
-  secret: 'your_secret_key', 
+  secret: 'your_secret_key',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false } 
+  cookie: {
+    secure: true,       
+    sameSite: 'none'     
+  }
 }));
 
 app.use(passport.initialize());
